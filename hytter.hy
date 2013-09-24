@@ -8,11 +8,11 @@
 
 ;;   "Get oauth's identification given a token and an app key"
 (defn oauth-identify
-  [consumer-key consumer-secret token token-secret] 
-  (OAuth1 %client-key consumer-key 
-          %client-secret consumer-secret 
-          %resource_owner_keytoken 
-          %resource_owner_secret token-secret))
+  [consumer-key consumer-secret token token-secret]
+  (OAuth1 %client-key consumer-key
+          %client-secret consumer-secret
+          %resource-owner-key token
+          %resource-owner-secret token-secret))
 
 (defn get-twitter-action [action-url oauth]
   (requests.get %url twurl %oauth oauth))
