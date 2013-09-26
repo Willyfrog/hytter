@@ -60,3 +60,12 @@
                     (.get config "auth" "consumer-secret")
                     (.get config "auth" "token")
                     (.get config "auth" "token-secret"))))
+
+(defn default-user [&optional [file "hytter.cnf"]]
+  (let [[config (ConfigParser)]]
+    (.read config file)
+    (.get config "defaults" "user")))
+
+(defn process-response [response]
+  (unless (none? response)
+    (, (getattr response ))))
