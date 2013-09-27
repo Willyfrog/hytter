@@ -1,0 +1,6 @@
+.venv #personal virtualenv
+*.hyc
+*.pyc
+*~
+*#
+hytter.cnf
